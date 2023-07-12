@@ -1,3 +1,5 @@
+[https://apify.com/epctex/metacritic-scraper](https://apify.com/epctex/metacritic-scraper?fpr=yhdrb)
+
 # Actor - Metacritic Scraper
 
 ## Metacritic scraper
@@ -6,15 +8,15 @@ Since Metacritic doesn't provide a good and free API, this actor should help you
 
 The Metacritic data scraper supports the following features:
 
--   Search any keyword - You can search any keyword to retrieve games, people, musics, movies, TV shows, companies and many more things Metacritic provides. Type any keyword you want to get the results of.
+-   Search any keyword - You can search any keyword to retrieve games, people, music, movies, TV shows, companies, and many more things Metacritic provides. Type any keyword you want to get the results of.
 
 -   Scrape lists - Scrape any list that you'd like to get from Metacritic
 
--   Scrape reviews - Get reviews from any object. Even if it is a game or a music, you can get all the reviews from Metacritic.
+-   Scrape reviews - Get reviews from any object. Even if it is a game or music, you can get all the reviews from Metacritic.
 
--   Movies, Games, Albums, TV Shows, People or Companies. All of the information can be retrieved right away from Metacritic!
+-   Movies, Games, Albums, TV Shows, People, or Companies. All of the information can be retrieved right away from Metacritic!
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/metacritic-scraper/issues).
 
@@ -22,37 +24,37 @@ This scraper is under active development. If you have any feature requests you c
 
 The input of this scraper should be JSON containing the list of pages on Metacritic that should be visited. Possible fields are:
 
-- `startUrls`: (Optional) (Array) List of Metacritic URLs. You can provide search, browse, game detail, movie detail, music detail, TV show detail, person detail, company detail and many more different detail URLs.
+- `startUrls`: (Optional) (Array) List of Metacritic URLs. You can provide search, browse, game detail, movie detail, music detail, TV show detail, person detail, company detail, and many more different detail URLs.
 
 - `search`: (Optional) (String) Keyword that you want to search on Metacritic.
 
-- `searchMode`: (Optional) (String) Search mode is only required when `search` attribute is provided into the scraper. It changes the search results and provide you the best outcome from Metacritic.
+- `searchMode`: (Optional) (String) Search mode is only required when `search` attribute is provided in the scraper. It changes the search results and provides you with the best outcome from Metacritic.
 
 - `includeReviews`: (Optional) (Boolean) This will add all the reviews that Metacritic provides inside the data points. Please keep in mind that the time and resources the actor uses will increase proportionally by the number of reviews.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
 ### Tip
 
-When you want to have a scrape over a specific listing URL, just copy and paste the link as one of the **startUrl**.
+When you want to scrape over a specific listing URL, just copy and paste the link as one of the **startUrl**.
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all detail requests. If actor doesn't block very often it'll scrape 100 items in 2 minutes with ~0.04-0.06 compute units.
+The actor is optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all detail requests. If the actor doesn't block very often it'll scrape 100 items in 2 minutes with ~0.04-0.06 compute units.
 
 ### Metacritic Scraper Input example
 
@@ -88,13 +90,13 @@ The actor optimized to run blazing fast and scrape as many items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## Metacritic Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Metacritic actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Metacritic actor.
 
 ## Scraped Metacritic Properties
 
@@ -2823,4 +2825,4 @@ The structure of each item in Metacritic looks like this:
 ```
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
